@@ -1,4 +1,4 @@
 Lunatic: Python in Lua
 ======================
 
-Forked from [http://labix.org/lunatic-python](Lunatic page).
+Forked from [Lunatic Page](http://labix.org/lunatic-python).
