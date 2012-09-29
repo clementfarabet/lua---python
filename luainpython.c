@@ -489,7 +489,7 @@ initlua(void)
 	if (!L) {
 		L = lua_open();
                 luaL_openlibs(L);
-		luaopen_python(L);
+		luaopen_libpython(L);
 		lua_settop(L, 0);
 	}
 }

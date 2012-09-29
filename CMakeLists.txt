@@ -11,7 +11,7 @@ INCLUDE_DIRECTORIES(
 )
 
 SET(src pythoninlua.c luainpython.c)
-SET(luasrc python.lua)
+SET(luasrc init.lua)
 
 ADD_TORCH_PACKAGE(python "${src}" "${luasrc}" "System/Interfaces")
 TARGET_LINK_LIBRARIES(python luaT TH ${PYTHON_LIBRARIES})

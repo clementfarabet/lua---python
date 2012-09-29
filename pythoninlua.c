@@ -555,7 +555,7 @@ static const luaL_reg py_lib[] = {
 	{NULL, NULL}
 };
 
-LUA_API int luaopen_python(lua_State *L)
+LUA_API int luaopen_libpython(lua_State *L)
 {
 	int rc;
 
