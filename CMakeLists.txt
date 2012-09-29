@@ -1,0 +1,17 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6 FATAL_ERROR)
+CMAKE_POLICY(VERSION 2.6)
+FIND_PACKAGE(Torch REQUIRED)
+FIND_PACKAGE(PythonLibs REQUIRED)
+
+MESSAGE(STATUS "Found Python headers in ${PYTHON_INCLUDE_DIRS}")
+
+INCLUDE_DIRECTORIES(
+    ${PROJECT_SOURCE_DIR} 
+    ${PYTHON_INCLUDE_DIRS}
+)
+
+SET(src pythoninlua.c luainpython.c)
+SET(luasrc python.lua)
+
+ADD_TORCH_PACKAGE(python "${src}" "${luasrc}" "System/Interfaces")
+TARGET_LINK_LIBRARIES(python luaT TH ${PYTHON_LIBRARIES})
