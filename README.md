@@ -1,6 +1,8 @@
 Lunatic: Python in Lua
 ======================
 
+Run a python interpreter within Lua. Pass data between python and lua.
+
 Bug-fixed fork of [lua---python](https://github.com/clementfarabet/lua---python) which itself is forked from [Lunatic Page](http://labix.org/lunatic-python).
 
 See [Lunatic Page](http://labix.org/lunatic-python) for original documentation.
