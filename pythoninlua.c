@@ -70,7 +70,7 @@ int py_convert(lua_State *L, PyObject *o, int withnone)
 		lua_pushboolean(L, 0);
 	} else if (PyString_Check(o)) {
 		char *s;
-		int len;
+		Py_ssize_t len;
 		PyString_AsStringAndSize(o, &s, &len);
 		lua_pushlstring(L, s, len);
 		ret = 1;
@@ -331,7 +331,7 @@ static int py_object_tostring(lua_State *L)
 			PyErr_Clear();
 		} else {
 			char *s;
-			int len;
+			Py_ssize_t len;
 			PyString_AsStringAndSize(repr, &s, &len);
 			lua_pushlstring(L, s, len);
 			Py_DECREF(repr);
